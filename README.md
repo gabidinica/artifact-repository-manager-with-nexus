@@ -148,17 +148,17 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
   -  cd java-maven-app
  Open the project in IntelliJ.
   
-  1.Update pom.xml for Deployment
+  1. Update pom.xml for Deployment
      - Open pom.xml
      - Locate the <distributionManagement> section.
      - Update the URL to your Nexus server’s Maven snapshots repository: [nexus id]:[nexus port]
   
   2. Configure Maven Credentials
-  Navigate to your Maven config folder:
-    -   ls -a | grep .m2
-    -   ls .m2/
-    -   cd .m2
-  Create or edit settings.xml: vim settings.xml
+  - Navigate to your Maven config folder:
+    - ls -a | grep .m2
+    - ls .m2/
+    - cd .m2
+  - Create or edit settings.xml: vim settings.xml
   Add your Nexus credentials:
    <settings>
   <servers>
