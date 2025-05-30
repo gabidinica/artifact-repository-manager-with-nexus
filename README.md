@@ -15,7 +15,7 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 
 ## 🧱 Step-by-Step Setup
 
-### 1. Create a DigitalOcean Droplet and secure the server with Firewall
+### Create a DigitalOcean Droplet and secure the server with Firewall
 
 1. Go to [DigitalOcean → Droplets](https://cloud.digitalocean.com/droplets) → **Create Droplet**
 2. Choose:
@@ -50,7 +50,7 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 
 -----
 
-##👤 Create new User on Nexus with relevant permissions
+## 👤 Create new User on Nexus with relevant permissions
 
  
 ### We’re gonna create a new user which is gonna be used by Nexus service so we won’t use the root user for it.
@@ -90,7 +90,7 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 
 ------
 
-##📦 Java Gradle Project: Build JAR & Upload to Nexus
+## 📦 Java Gradle Project: Build JAR & Upload to Nexus
 
 To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus user with specific permissions.
  1. After you’ve logged in with the admin user, go to **Security - Users - Create a new user**.
