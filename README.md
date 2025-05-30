@@ -159,7 +159,8 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
     - ls .m2/
     - cd .m2
   - Create or edit settings.xml: vim settings.xml
-  Add your Nexus credentials:
+  - Add your Nexus credentials:
+  ```xml
    <settings>
   <servers>
     <server>
@@ -169,20 +170,19 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
     </server>
   </servers>
 </settings>
-  Replace your_username and your_user_password with the Nexus user you created earlier. Save and exit.
+  -  Replace your_username and your_user_password with the Nexus user you created earlier. Save and exit.
  
   3. Build and Deploy Your JAR
-  From the project folder:
+  - From the project folder:
     - ls
     - mvn package
     - ls target
-  You will see the generated JAR file inside target.
-  To deploy (upload) the JAR to Nexus: **mvn deploy**
+  - You will see the generated JAR file inside target. To deploy (upload) the JAR to Nexus: **mvn deploy**
   
   4. Verify in Nexus
-   Open your browser: http://<your-nexus-ip>:<port-id>
-   Navigate to Browse (top menu).
-   Select the maven-snapshots repository and confirm that your uploaded JAR appears there.
+   - Open your browser: http://<your-nexus-ip>:<port-id>
+   - Navigate to Browse (top menu).
+   - Select the maven-snapshots repository and confirm that your uploaded JAR appears there.
  
 
 
