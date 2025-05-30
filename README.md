@@ -131,17 +131,19 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
    - You can copy from your browser. The jar file will be found in Nexus on **Repositories -> maven-snapshots** folder.
    1. Create a file in the root of your project named: **gradle.properties**
    2. Add the following:
-    ```xml
-     repoUser=your-upload-username
-     repoPassword=your-upload-password
-     ```
+```xml
+   repoUser=your-upload-username
+   repoPassword=your-upload-password
+ ```
   - Replace your-upload-username and your-upload-password with the credentials of the Nexus user you previously created.
   3. In your terminal, in the project folder, we need to build the project: gradle build
      - In IntelliJ if you check there will be created a new **build** folder and if you expand it and go to libs, there will be the jar file.
   4. Type: ls and check that build folder is displayed.
   5. To upload the jar file execute: **gradle publish** 
-✅ If everything is configured correctly, the JAR will be published to:
-    http://<your-nexus-ip>:8081/#browse/browse:maven-snapshots
+  6. ✅ If everything is configured correctly, the JAR will be published to:
+```xml    
+  http://<your-nexus-ip>:8081/#browse/browse:maven-snapshots
+```
   
 -------
 
