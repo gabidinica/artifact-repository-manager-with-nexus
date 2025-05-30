@@ -117,23 +117,27 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
    - Remove the nx-anonymous role
    - Assign the new nexus-java role
    - Save the changes
-✅ Your user now has permission to upload artifacts to your Nexus Maven snapshot repository.
+4. ✅ Your user now has permission to upload artifacts to your Nexus Maven snapshot repository.
 
   Clone the project from your GitHub/GitLab repository and open it in IntelliJ IDEA (or your preferred IDE):
-  -  git clone https://github.com/your-username/java-gradle-app.git
-  -  cd java-gradle-app
-
+  ```xml
+   git clone https://github.com/your-username/java-gradle-app.git
+    cd java-gradle-app
+   ```
   Open the project in IntelliJ IDEA and ensure the following line exists in your build.gradle file (it already should be present): **apply plugin: 'maven-publish'**
-   In the same file, please check publishing section.  
-   Publications is the jar file configuration that we’re gonna upload and repositories is the repo where we’re gonna upload the jar file.
-   On the repositories, on URL line: you need to update with your [nexus id]:[nexus port]. You can copy from your browser. The jar file will be found in Nexus on **Repositories -> maven-snapshots** folder.
+   - In the same file, please check publishing section.  
+   - Publications is the jar file configuration that we’re gonna upload and repositories is the repo where we’re gonna upload the jar file.
+   - On the repositories, on URL line: you need to update with your [nexus id]:[nexus port].
+   - You can copy from your browser. The jar file will be found in Nexus on **Repositories -> maven-snapshots** folder.
    1. Create a file in the root of your project named: **gradle.properties**
    2. Add the following:
-    - repoUser=your-upload-username
-    - repoPassword=your-upload-password
-  Replace your-upload-username and your-upload-password with the credentials of the Nexus user you previously created.
+    ```xml
+     repoUser=your-upload-username
+     repoPassword=your-upload-password
+     ```
+  - Replace your-upload-username and your-upload-password with the credentials of the Nexus user you previously created.
   3. In your terminal, in the project folder, we need to build the project: gradle build
-   In IntelliJ if you check there will be created a new **build** folder and if you expand it and go to libs, there will be the jar file.
+     - In IntelliJ if you check there will be created a new **build** folder and if you expand it and go to libs, there will be the jar file.
   4. Type: ls and check that build folder is displayed.
   5. To upload the jar file execute: **gradle publish** 
 ✅ If everything is configured correctly, the JAR will be published to:
