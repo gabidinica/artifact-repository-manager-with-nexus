@@ -170,6 +170,7 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
     </server>
   </servers>
 </settings>
+```
   -  Replace your_username and your_user_password with the Nexus user you created earlier. Save and exit.
  
   3. Build and Deploy Your JAR
