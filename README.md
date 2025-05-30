@@ -88,6 +88,8 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
           and copt the displayed password and paste into the login page
   You now have full access to the Nexus Repository Manager UI.
 
+------
+
 📦 Java Gradle Project: Build JAR & Upload to Nexus
 
 To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus user with specific permissions.
@@ -137,6 +139,7 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
 ✅ If everything is configured correctly, the JAR will be published to:
     http://<your-nexus-ip>:8081/#browse/browse:maven-snapshots
   
+-------
 
  ☕ Java Maven Project: Build JAR & Upload to Nexus
 
