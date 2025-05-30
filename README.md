@@ -50,10 +50,10 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 
 -----
 
-👤 Create new User on Nexus with relevant permissions
+##👤 Create new User on Nexus with relevant permissions
 
  
-## We’re gonna create a new user which is gonna be used by Nexus service so we won’t use the root user for it.
+### We’re gonna create a new user which is gonna be used by Nexus service so we won’t use the root user for it.
 
  1. In the terminal, in the same folder /opt, add a new user: adduser nexus
    - set a password
@@ -90,7 +90,7 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 
 ------
 
-📦 Java Gradle Project: Build JAR & Upload to Nexus
+##📦 Java Gradle Project: Build JAR & Upload to Nexus
 
 To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus user with specific permissions.
  1. After you’ve logged in with the admin user, go to **Security - Users - Create a new user**.
@@ -147,7 +147,7 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
   
 -------
 
- ☕ Java Maven Project: Build JAR & Upload to Nexus
+## ☕ Java Maven Project: Build JAR & Upload to Nexus
 
  Clone your Maven project and open it in IntelliJ IDEA:
   -  git clone https://github.com/your-username/java-maven-app.git
@@ -187,7 +187,7 @@ To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus
   - You will see the generated JAR file inside target. To deploy (upload) the JAR to Nexus: **mvn deploy**
   
   4. Verify in Nexus
-   - Open your browser: http://<your-nexus-ip>:<port-id>
+   - Open your browser: http://your-nexus-ip:port-id
    - Navigate to Browse (top menu).
    - Select the maven-snapshots repository and confirm that your uploaded JAR appears there.
  
