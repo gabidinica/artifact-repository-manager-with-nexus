@@ -83,10 +83,12 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
   
   1. Click on "Sign in" (top-right corner)
   2. Use the following default credentials:
-	- Username: admin
- 	- Password: Found inside: cat /opt/sonatype-work/nexus3/admin.password
-          and copt the displayed password and paste into the login page
-  You now have full access to the Nexus Repository Manager UI.
+```xml
+   Username: admin
+   Password: Found inside: cat /opt/sonatype-work/nexus3/admin.password
+```
+   - Copy the displayed password and paste into the login page
+   - You now have full access to the Nexus Repository Manager UI.
 
 ------
 
@@ -95,22 +97,22 @@ Nexus requires a server with higher memory allocation. It is recommended to use 
 To allow your Gradle project to upload JARs to Nexus, you need a dedicated Nexus user with specific permissions.
  1. After you’ve logged in with the admin user, go to **Security - Users - Create a new user**.
  Fill in:
-   - User ID: your-upload-user
-   - First Name / Last Name: (any)
-   - Email: (optional)
-   - Password: set your secure password
-   - Status: Active
-   - Roles: assign nx-anonymous temporarily
+   - **User ID**: your-upload-user
+   - **First Name / Last Name**: (any)
+   - **Email: (optional)**
+   - **Password**: set your secure password
+   - **Status**: Active
+   - **Roles**: assign nx-anonymous temporarily
    - Click Create user
  2.  Create a Custom Role
    - Go to Security → Roles → Create role
-   - Role type: Nexus Role
-   - Role ID: nexus-java
-   - Role name: nexus-java
- Applied Privileges:
-   - Click Modify applied privileges
-   - Search and select: nx-repository-view-maven2-maven-snapshots-*    (This provides read/write access to Maven2 snapshot repositories.)
-   - Click Save to create the role
+     - **Role type**: Nexus Role
+     - **Role ID**: nexus-java
+     - **Role name**: nexus-java
+     **Applied Privileges**:
+      - Click Modify applied privileges
+      - Search and select: nx-repository-view-maven2-maven-snapshots-*    (This provides read/write access to Maven2 snapshot repositories.)
+      - Click Save to create the role
  3. Assign the Role to the User
    - Go to Security → Users
    - Edit the user you created
